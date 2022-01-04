@@ -1,5 +1,5 @@
 html, body {
-    margin: 0;
+    margin: 5;
     padding: 0;
 }
 
@@ -9,4 +9,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 3px 2px 2px #474747;
 }
