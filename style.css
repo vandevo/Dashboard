@@ -36,6 +36,5 @@ body {
 .container {
     display: flex;
     border: 5px solid #ffcc5c;
-    justify-content: space-around
-    
+
 }
