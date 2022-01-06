@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 body {
@@ -39,15 +40,16 @@ body {
 
 .container {
     border: 5px solid #ffcc5c;
-
     display: flex;
-
+    height: 100%;
+    align-items: center;
 }
 
-.container > #author {
-    flex: 1
+#logout {
+    align-self: flex-start;
+} 
+
+#author {
+    align-self: flex-end;
 }
 
-.container > #logout {
-    flex: 1
-}
