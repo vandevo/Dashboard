@@ -20,6 +20,8 @@ body {
     text-align: center;
     font-size: 2em;
     color: #ffeead;
+
+    width: 300px;
   }
 
   .container > div:nth-child(1) {
@@ -41,6 +43,18 @@ body {
 .container {
     border: 5px solid #ffcc5c;
     display: flex;
-  
+
    
+}
+
+#item1 {
+  order: 1;
+}
+
+#item2 {
+  order: 0;
+}
+
+#item3 {
+  order: -1;
 }
