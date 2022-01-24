@@ -38,3 +38,9 @@ div#crypto-top {
 div#crypto-top > span {
   margin-left: .4em;
 }
+
+div#price {
+  display: column;
+  align-items: center;
+  
+}

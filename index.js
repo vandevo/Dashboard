@@ -26,6 +26,13 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
   .then(data => {
       document.getElementById("crypto-top").innerHTML = `
       <img src=${data.image.small}/>
-      <span>${data.name}</span>`
+      <span>${data.name}</span>
+      `
+
+      document.getElementById("price").innerHTML = `
+      <p>Current Price 🎯 ${data.market_data.current_price.usd}</p>
+      <p>24h High Price 👆 ${data.market_data.high_24h.usd}</p>
+      <p>24h Low Price 👇 ${data.market_data.low_24h.usd}</p>`
+
   })
   .catch(err => console.error(err))
