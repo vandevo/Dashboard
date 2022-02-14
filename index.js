@@ -36,3 +36,10 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 
   })
   .catch(err => console.error(err))
+
+
+  
+  const date = new Date()
+  let getDate = document.getElementsByClassName('time')
+ getDate.innerHTML = date.toLocaleTimeString("en-us", {timeStyle: "short"})
+ }
