@@ -38,7 +38,26 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
   .catch(err => console.error(err))
 
 
-  
-  const date = new Date()
 
-document.getElementById('time').textContent = date.toLocaleTimeString("en-us", {timeStyle: "short"})
+function getCurrentTime(){
+const date = new Date()
+document.getElementById('time').textContent = date.toLocaleTimeString("en-us", {timeStyle: "short"}
+)
+}
+
+setInterval(getCurrentTime, 1000) 
+
+
+navigator.geolocation.getCurrentPosition(position => {
+
+});
+
+navigator.geolocation.getCurrentPosition()
+.then(position =>{
+  console.log(position);
+})
+
+async function getLocation(){
+  const position = await navigator.geolocation.getCurrentPosition()
+  console.log(position)
+}
