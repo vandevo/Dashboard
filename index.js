@@ -48,16 +48,19 @@ document.getElementById('time').textContent = date.toLocaleTimeString("en-us", {
 setInterval(getCurrentTime, 1000) 
 
 
+
 navigator.geolocation.getCurrentPosition(position => {
+  fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial`)
+    .then(res =>  {
+      if (!res.okay) {
+        throw Error("Weather data is not available")
+      }
+      return res.jason()
+    })
+    .then(data => {
+      console.log(data)
+    })
+
 
 });
 
-navigator.geolocation.getCurrentPosition()
-.then(position =>{
-  console.log(position);
-})
-
-async function getLocation(){
-  const position = await navigator.geolocation.getCurrentPosition()
-  console.log(position)
-}
